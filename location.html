@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Al-Hira Community Center</title>
@@ -14,38 +14,65 @@
   <script type="text/javascript" src="js/cufon-replace.js"></script>
   <script type="text/javascript" src="js/jquery.faded.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-    <style type="text/css">
-        .newStyle1 {
-            font-size: medium;
-        }
-        .auto-style1 {
-            color: #006600;
-        }
-        .auto-style2 {
-            color: #0000FF;
-        }
-        .auto-style3 {
-            color: #993300;
-        }
-        .auto-style5 {
-            color: #000066;
-        }
-        .blink {
-            animation-duration: 1s;
-            animation-name: blink;
-            animation-iteration-count: 3;
-            animation-timing-function: steps(2, start);
-        }
-        @keyframes blink {
-            80% {
-                visibility: hidden;
-            }
-        }
-    </style>
+<script src=" http://maps.google.com/?file=api&amp;v=2.x&amp;key=ABQIAAAAP1vmDzMa6Looc3qneFptGhRt87ut7BQN-wulcbWfEXMqKRdYlxRiOcyjf8vb7EwGZei3rtnwTfcugw"
+type="text/javascript"></script>
+<script type="text/javascript">
 
+var map;
+var gdir;
+var geocoder = null;
+var addressMarker;
+
+function initialize() {
+if (GBrowserIsCompatible()) {
+map = new GMap2(document.getElementById("map_canvas"));
+gdir = new GDirections(map, document.getElementById("directions"));
+GEvent.addListener(gdir, "load", onGDirectionsLoad);
+GEvent.addListener(gdir, "error", handleErrors);
+
+setDirections("Chicago, IL", "190 West Irving Park Road, Wood Dale, IL 60191", "en_US");
+}
+}
+
+function setDirections(fromAddress, toAddress, locale) {
+gdir.load("from: " + fromAddress + " to: " + toAddress,
+{ "locale": locale });
+}
+
+function handleErrors(){
+if (gdir.getStatus().code == G_GEO_UNKNOWN_ADDRESS)
+alert("No corresponding geographic location could be found for one of the specified addresses. This may be due to the fact that the address is relatively new, or it may be incorrect.\nError code: " + gdir.getStatus().code);
+else if (gdir.getStatus().code == G_GEO_SERVER_ERROR)
+alert("A geocoding or directions request could not be successfully processed, yet the exact reason for the failure is not known.\n Error code: " + gdir.getStatus().code);
+
+else if (gdir.getStatus().code == G_GEO_MISSING_QUERY)
+alert("The HTTP q parameter was either missing or had no value. For geocoder requests, this means that an empty address was specified as input. For directions requests, this means that no query was specified in the input.\n Error code: " + gdir.getStatus().code);
+
+// else if (gdir.getStatus().code == G_UNAVAILABLE_ADDRESS) <--- Doc bug... this is either not defined, or Doc is wrong
+// alert("The geocode for the given address or the route for the given directions query cannot be returned due to legal or contractual reasons.\n Error code: " + gdir.getStatus().code);
+
+else if (gdir.getStatus().code == G_GEO_BAD_KEY)
+alert("The given key is either invalid or does not match the domain for which it was given. \n Error code: " + gdir.getStatus().code);
+
+else if (gdir.getStatus().code == G_GEO_BAD_REQUEST)
+alert("A directions request could not be successfully parsed.\n Error code: " + gdir.getStatus().code);
+
+else alert("An unknown error occurred.");
+
+}
+
+function onGDirectionsLoad(){
+// Use this function to access information about the latest load()
+// results.
+
+// e.g.
+// document.getElementById("getStatus").innerHTML = gdir.getStatus().code;
+// and yada yada yada...
+}
+</script>
 </head>
 
-<body id="page1" onLoad="myclock();">
+<body id="page1" onLoad="myclock();initialize();" onunload="GUnload()">
   <div id="main">
   	<!-- header -->
     <header>
@@ -187,84 +214,66 @@
         <!-- content -->
         <section id="content">
           <article>
-              <h2 class="auto-style3"><strong>Welcome to Al Hira</strong></h2>
-                  <p class="auto-style3">&nbsp;</p>
-              <a href="downloads/DonationForm.pdf">
-              <img src="images/UrgentRequest.jpg" style="width: 100%;" title="Please click to download/print donation form" ></a></article>
-            <a href="downloads/AnnualGeneralBodyMeeting.pdf" title="Please click to download the notice"><h2 class="blink">ANNUAL GENERAL BODY MEETING<br/>
-            </h2><h3>Will be held on JANUARY 28, 2017. Please click to download notice!</h3> </a>
-            <h2 class="blink">Latest Announcement: Masjid is Relocated!</h2>
-            <p>
+            <h2 class="first">Location</h2>
+             <p class="p1">Our Address is:</p>
+        	<b>Al-Hira Community Center</b><br />
+            190 West Irving Park Road, Wood Dale, IL 60191<br />
+        	<b>Phone:</b> 630.350.7860 <b>eMail:</b> admin@alhiracommunity.org<br />
+          </article>
+<form action="#" onsubmit="setDirections(this.from.value, this.to.value, this.locale.value); return false">
+          <article>
+            <h2 class="first">Get Directions</h2>
+             <p class="p1">
+<table>
 
-            </p>
-            <p></p>
-
-                Al-Hira Masjid has now been re-located to 190 West Irving Park Road, Wood
-                Dale, IL 60191; close to O’Hare Airport. It offers five time
-                prayers, Two Jummah prayers, Taraweeh prayers, Quranic school for children and
-                adults, Youth and women’s programs, Ramadan Iftar program, Dawah, and help
-                for people who are in need. We relocated the Al-Hira Masjid because the old place was
-                bought by the City of Wood Dale. For finishing off the remaining work, we are requesting for your help.
-                Please donate generously to meet the minimum of $400,000 to complete the unfinished jobs.
-                You can help the House of Allah in following ways:
-            </p>
-            <a href="downloads/DonationForm.pdf" title="Please click to download/print donation form">
-              <nl  style="font-weight: bold; font-size: 85%; padding-left:15em ">
-                  <li>One time donation of $5000, $2500 or $1000</li>
-                  <li>Buying tax-exempt material for Al-Hira for construction</li>
-                  <li>Labor expenses</li>
-                  <li>Loan or “Qarz-e-Hasana” for 12-18 months. New building is 100% free and clear.
-                      your loan is secured</li>
-              </nl>
-            </a>
-              <p></p>
-
-              Besides your financial support through above means, please also make a sincere duaa for the completion remaining work on your Al-Hira Masjid.<p></p><p></p>
-                  <p class="auto-style1"><strong>Request made by: Board of Directors, Al-Hira Community Center:</strong></p>
-              <p class="MsoNormal">
-                  <span class="auto-style2">Mohammad Iqbal Chohan: (773) 507-4582</span><br/>
-                  <span class="auto-style2">Mohammad Ahsan Raza: (630) 674-0555</span><br/>
-                  <span class="auto-style2">Younus Mohamed Jamal Hariri: (773) 615-5123</span></p>
-
-              <div class="box">
-                  <strong class="newStyle1">Friday Prayers (Iqamas)<br/> 12:30 and 1:30</strong>.<br/> Please download the latest <a href="prayertt.html">Prayer Time Table</a>
-              </div>
-              <p style="font-size: large; align-content: center">Click following picture to visit the new Al Hira site</p>
-              <p>190 West Irving Park Road, Wood Dale, IL 60191</p>
-              
-              <a href="https://www.google.com/maps/place/190+W+Irving+Park+Rd,+Wood+Dale,+IL+60191/@41.964021,-87.9845871,18.95z/data=!4m2!3m1!1s0x880fb2383576c62b:0x17d81c45e6dcf960">
-              <img src="images/Mosque.jpg" style="width: 100%;" title="Click to get directions of new Al Hira site" h></>
-              </a>
-              
-                    </article>
+<tr><th align="right">From:&nbsp;</th><td><input type="text" size="50" id="fromAddress" name="from" value="Chicago, IL" /></td></tr>
+<tr><th align="right">To:&nbsp;</th><td><input type="text" size="50" id="toAddress" name="to" value="190 West Irving Park Road, Wood Dale, IL 60191" /></td></tr>
+<tr><th>Language:&nbsp;</th><td colspan="3"><select id="locale" name="locale">
+<option value="en" selected>English</option>
+<option value="fr">French</option>
+<option value="de">German</option>
+<option value="ja">Japanese</option>
+<option value="es">Spanish</option>
+</select>
+</td></tr>
+<tr><th align="right">&nbsp;</th><td><input name="submit" type="submit" value="Get Directions!" /></td></tr>
+</table>
+</form></p>
+          </article>
+          <article>
+            <h2 class="first">Map</h2>
+             <p class="p1"><center><td valign="top"><div id="map_canvas" style="width: 425px; height: 350px"></div></td></center></p>
+          </article>
+          <article>
+            <h2 class="first">Driving Directions</h2>
+             <p class="p1"><td valign="top"><div id="directions"></div></td></p>
+          </article>
         </section>
-            <aside class="right-side">
-                <div class="box">
-                    <div class="left-top-corner">
-                        <div class="right-top-corner">
-                            <div class="right-bot-corner">
-                                <div class="left-bot-corner">
-                                    <div class="inner">
+        <!-- aside -->
+        <aside class="right-side">
+          <!-- .box -->
+          <div class="box">
+            <div class="left-top-corner">
+              <div class="right-top-corner">
+                <div class="right-bot-corner">
+                  <div class="left-bot-corner">
+                    <div class="inner">
+                      <h3>Prayer Times</h3>
                       <table class="schedule">
 
                         <tbody>
                         	<iframe src="http://www.islamicfinder.org/prayer_service.php?country=usa&city=wood_dale&state=IL&zipcode=60191&latitude=41.9645&longitude=-87.9808&timezone=-6&HanfiShafi=2&pmethod=5&fajrTwilight1=10&fajrTwilight2=10&ishaTwilight=&ishaInterval=30&dhuhrInterval=1&maghribInterval=1&dayLight=1&page_background=F6F4EB&table_background=F6F4EB&table_lines=BF1010&text_color=83775A&link_color=83775A&prayerFajr=Fajr&prayerSunrise=Sunrise&prayerDhuhr=Dhuhr&prayerAsr=Asr&prayerMaghrib=Maghrib&prayerIsha=Isha" frameborder=0 width=175 height=380 marginwidth=0 marginheight=0 scrolling="no"> </iframe>
                         </tbody>
                       </table>
-                                        <div class="aligncenter">
-                                        <span class="auto-style5"><strong>Friday Prayers (Iqamas): 12:30 and 1:30</br><a href="prayertt.html">Monthly Prayer Times</strong></span>
-                                        
-                                        </div>
-                                        
                     </div>
-                 </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- /.box -->
           <!-- .box -->
-        <div class="box">
+          <div class="box">
             <div class="left-top-corner">
               <div class="right-top-corner">
                 <div class="right-bot-corner">
@@ -317,11 +326,11 @@
     <div class="container">
       <div class="wrapper">
       	<div class="fleft">
-        	Al-Hira Community Center &copy; 2013 | <a href="privacy.html">Privacy Policy</a><br /><!-- {%FOOTER_LINK} -->
+        	Al-Hira Community Center &copy; 2010 | <a href="privacy.html">Privacy Policy</a><br /><!-- {%FOOTER_LINK} -->
         </div>
         <div class="fright">
         	Al-Hira Community Center<br />
-            190 West Irving Park Road, Wood Dale, IL 60191<br />
+        	140 West Commercial Street, Wood Dale, IL 60191 USA<br />
         	Phone: 630.350.7860 eMail: admin@alhiracommunity.org
         </div>
       </div>
@@ -330,4 +339,3 @@
   <script type="text/javascript"> Cufon.now(); </script> 
 </body>
 </html>
-
