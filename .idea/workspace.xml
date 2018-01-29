@@ -5,9 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/index.html" line="252" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49175ba1-f6de-4415-ab9b-7b31bae90b51" name="Default" comment="Updated December Time Table">
+    <list default="true" id="49175ba1-f6de-4415-ab9b-7b31bae90b51" name="Default" comment="Updated January Time Table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/prayertt.html" afterPath="$PROJECT_DIR$/prayertt.html" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="Alhira.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="prayertt.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="prayertt.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/prayertt.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="197" column="149" lean-forward="false" selection-start-line="197" selection-start-column="149" selection-end-line="197" selection-end-column="149" />
+            <state relative-caret-position="457">
+              <caret line="252" column="98" lean-forward="false" selection-start-line="252" selection-start-column="98" selection-end-line="252" selection-end-column="98" />
               <folding>
                 <element signature="n#style#0;n#nl#0;n#a#0;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#11;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -62,6 +62,7 @@
       <find>140</find>
       <find>DonationsF</find>
       <find>12:30 and 1:30</find>
+      <find>1:30 and 2:30</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,8 +72,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/location.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/prayertt.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -102,6 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,8 +116,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,7 +272,8 @@
       <workItem from="1509418590351" duration="13000" />
       <workItem from="1511624888766" duration="153000" />
       <workItem from="1511625213814" duration="957000" />
-      <workItem from="1514736484909" duration="264000" />
+      <workItem from="1514736484909" duration="329000" />
+      <workItem from="1517188020916" duration="297000" />
     </task>
     <task id="LOCAL-00001" summary="February Timetable Added">
       <created>1485825277839</created>
@@ -357,11 +359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506993299689</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated January Time Table">
+      <created>1514736794028</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1514736794028</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26479000" />
+    <option name="totallyTimeSpent" value="26841000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,12 +382,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-8" width="1873" height="1096" extended-state="6" />
+    <frame x="98" y="-12" width="3274" height="1914" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13297002" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13266896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.078975454" sideWeight="0.66135037" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07885086" sideWeight="0.66135037" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21215597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25762528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -421,7 +431,8 @@
     <MESSAGE value="Added June Financial Statement" />
     <MESSAGE value="Annual BBQ" />
     <MESSAGE value="Updated Ocotber Time Table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Ocotber Time Table" />
+    <MESSAGE value="Updated January Time Table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated January Time Table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -863,22 +874,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="197" column="149" lean-forward="false" selection-start-line="197" selection-start-column="149" selection-end-line="197" selection-end-column="149" />
-          <folding>
-            <element signature="n#style#0;n#nl#0;n#a#0;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#11;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prayertt.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="165" column="75" lean-forward="false" selection-start-line="165" selection-start-column="75" selection-end-line="165" selection-end-column="75" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="252" column="98" lean-forward="false" selection-start-line="252" selection-start-column="98" selection-end-line="252" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#nl#0;n#a#0;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#11;n#section#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
